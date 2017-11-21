@@ -63,21 +63,51 @@ switch (job) {
         console.log('John does something else');
 }*/
 
-var jHeight = 175;
+/*var jHeight = 175;
 var jAge = 50;
 
-var aHeight = 179;
-var aAge = 32;
+var aHeight = 175;
+var aAge = 50;
+
+var mHeight = 175;
+var mAge = 50;
 
 var jScore = jHeight + (jAge *= 5);
 var aScore = aHeight + (aAge *= 5);
+var mScore = mHeight + (mAge *= 5);
 
-if (jScore > aScore) {
-    console.log('John is the winner, total score: ' + jScore + ' / Alex score: ' + aScore);
+if (jScore > aScore && jScore > mScore) {
+    console.log('John is the winner, total score: ' + jScore + ' / Alex score: ' + aScore + ' / Mike score: ' + mScore);
 }
-else if (aScore > jScore) {
-    console.log('Alex is the winner, total score: ' + aScore + '/ John score: ' +jScore);
+else if (aScore > jScore && aScore > mScore) {
+    console.log('Alex is the winner, total score: ' + aScore + '/ John score: ' +jScore + ' / Mike score: ' + mScore);
+}
+else if (mScore > jScore && mScore > aScore) {
+    console.log('Mike is the winner, total score: ' + mScore + '/ John score: ' +jScore + ' / Alex score: ' + aScore);
 }
 else {
-    console.log('Draw, John score: ' + jScore + ' Alex score: ' + aScore);
+    console.log('Draw, John score: ' + jScore + ' Alex score: ' + aScore + ' Mike score: ' + mScore);
+}*/
+
+
+function calculateAge(yearOfBirth) {
+    var age = 2016 - yearOfBirth;
+    return age;
 }
+
+var ageJohn = calculateAge(1990);
+
+function yearsUntilRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+
+    if (retirement >=0) {
+        console.log(name + ' retires in ' + retirement + ' years');
+    } else {
+        console.log(name + ' is alreay retired ');
+    }
+    
+}
+
+yearsUntilRetirement('John', 1940);
+yearsUntilRetirement('Mike', 1969);
