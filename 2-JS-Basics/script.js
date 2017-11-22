@@ -90,7 +90,7 @@ else {
 }*/
 
 
-function calculateAge(yearOfBirth) {
+/*function calculateAge(yearOfBirth) {
     var age = 2016 - yearOfBirth;
     return age;
 }
@@ -110,4 +110,74 @@ function yearsUntilRetirement(name, year) {
 }
 
 yearsUntilRetirement('John', 1940);
-yearsUntilRetirement('Mike', 1969);
+yearsUntilRetirement('Mike', 1969);*/
+
+/*var names = ['John', 'Jane', 'Mark'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[0]);
+names[1] = 'Ben';
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr.');
+john.pop();
+john.shift();
+console.log(john);
+
+if (john.indexOf('teacher') === -1) {
+    console.log('John is not a teacher');
+}*/
+
+/*var john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false
+};
+
+console.log(john.name);
+console.log(john['lastName']);
+
+var jane = new Object();
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;*/
+
+/*var john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    calculateAge: function(yearOfBirth) {
+        return 2016 - this.yearOfBirth;
+    }
+};
+
+console.log(john.calculateAge());
+
+var age = john.calculateAge();
+john.age = age;
+
+console.log(john);*/
+
+var john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family: ['Jane', 'Mark', 'Bob'],
+    calculateAge: function(yearOfBirth) {
+        this.age = 2016 - this.yearOfBirth;
+    }
+};
+
+john.calculateAge();
+console.log(john);
