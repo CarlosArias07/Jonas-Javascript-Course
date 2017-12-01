@@ -25,7 +25,7 @@ console.log(age);*/
 
 // Lecture: Scope
 
-var a = 'Hello!';
+/*var a = 'Hello!';
 first();
 
 function first() {
@@ -34,6 +34,46 @@ function first() {
 
     function second() {
         var c = 'Hey!';
-        console.log(a + b + c);
+        third();
     }
 }
+
+function third() {
+    var d = 'John';
+    console.log(b);
+}*/
+
+// Lecture: This
+
+//console.log(this);
+
+/*calculateAge(1985);
+
+function calculateAge(year) {
+    console.log(2016 - year);
+    console.log(this);
+}
+*/
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+        console.log(2016 - this.yearOfBirth);
+/*
+        function innerFunction() {
+            console.log(this);
+        }
+        innerFunction();*/
+    }
+}
+
+john.calculateAge();
+
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984,
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
