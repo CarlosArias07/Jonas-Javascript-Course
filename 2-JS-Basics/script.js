@@ -167,7 +167,7 @@ john.age = age;
 
 console.log(john);*/
 
-var john = {
+/*var john = {
     name: 'John',
     lastName: 'Smith',
     yearOfBirth: 1990,
@@ -181,3 +181,88 @@ var john = {
 
 john.calculateAge();
 console.log(john);
+*/
+
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+/*
+for (var i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+for (var i = names.length - 1; i >= 0; i--) {
+    console.log(names[i]);
+}
+
+
+var i = 0;
+while (i < names.length) {
+    console.log(names[i]);
+    i++;
+}
+
+for (var i = 0; i <= 5 ; i++) {
+    console.log(i);
+
+    if (i === 3) {
+        break;
+    }
+}
+
+for (var i = 0; i <= 5 ; i++) {
+    if (i === 3) {
+        continue;
+    }
+
+    console.log(i);   
+}
+*/
+
+//CODING CHALLENGE 2
+/*
+var yearsOfBirth = [1975, 1988, 1993, 1998, 2007];
+
+var ages = [];
+
+for (var i = 0; i < yearsOfBirth.length; i++) {
+    ages[i] = 2017 - yearsOfBirth[i];
+}
+
+for (var i = 0; i < ages.length; i++) {
+
+    if (ages[i] >= 18) {
+        console.log(ages[i]);
+    }
+}*/
+
+function printFullAge(yearsOfBirth) {
+    var ages = [];
+
+    for (var i = 0; i < yearsOfBirth.length; i++) {
+        ages[i] = 2017 - yearsOfBirth[i];
+    }
+
+    var isFullAge = [];
+    
+    for (var i = 0; i < ages.length; i++) {
+    
+        if (ages[i] >= 18) {
+            isFullAge.push(true);
+            console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old, and is of full age');
+        } else {
+            isFullAge.push(false);
+            console.log('Person ' + (i + 1) + ' is ' + ages[i] + ' years old, and is NOT of full age');
+        }
+    }
+
+    return isFullAge;
+}
+
+var yearsOfBirth1 = [1975, 1988, 1993, 1998, 2007];
+var yearsOfBirth2 = [2012, 1992, 2000, 1998, 1975];
+
+var full_1 = [printFullAge(yearsOfBirth1)];
+var full_2 = [printFullAge(yearsOfBirth2)];
+
+console.log(full_1);
+console.log(full_2);
